@@ -1,0 +1,120 @@
+footer {
+  padding: 35px 0 15px;
+  background: #121c31;
+  color: #fff;
+  h4 {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  a {
+    color: #fff;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  p {
+    text-align: right;
+    font-size: 12px;
+    line-height: 15px;
+    color: #bbb;
+    &:last-child {
+      font-size: 8px;
+      line-height: 10px;
+      color: #fff;
+    }
+  }
+  form {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    input[type="text"] {
+      max-width: 230px;
+      height: 35px;
+      padding: 12px 0 12px 15px;
+      border-radius: 0;
+      border: 2px solid #eeeeee;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      width: 80px;
+      height: 35px;
+      background: #0f254c;
+      position: relative;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 15px;
+      text-align: center;
+      color: #ffffff;
+      cursor: pointer;
+      transition: all 0.4s ease-in-out;
+      &:hover {
+        background: #e54a35;
+      }
+    }
+  }
+}
+
+.container {
+}
+
+.footer__logo {
+}
+
+.footer__row {
+  padding: 0 0 30px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #1c2b4a;
+}
+
+.footer__item {
+}
+
+.footer__navigation {
+  > ul {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+    li {
+      margin: 0 15px 0 0;
+      a {
+        transition: all 0.4s ease-in-out;
+        &:hover {
+          color: #e54a35;
+        }
+      }
+    }
+  }
+}
+
+.footer__social_row {
+  > ul {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: flex-end;
+    li {
+      margin: 0 10px 0 0;
+      a {
+        svg {
+          path {
+            transition: all 0.4s ease-in-out;
+          }
+        }
+        &:hover {
+          svg {
+            path {
+              fill: #e54a35;
+            }
+          }
+        }
+      }
+    }
+  }
+}
