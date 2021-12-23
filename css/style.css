@@ -560,20 +560,16 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
 .benefits__item {
   max-width: 210px;
-  margin: 0 50px 20px 0;
-  text-align: center;
-}
-.benefits__item:last-child {
   margin: 0 0 20px 0;
+  text-align: center;
 }
 .benefits__item > svg {
   display: block;
