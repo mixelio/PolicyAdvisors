@@ -1,6 +1,137 @@
 header {
   padding: 30px 0 0;
   margin: 0 0 90px;
+  position: relative;
+}
+
+body {
+  &._lock {
+    overflow: hidden;
+  }
+}
+
+.menu__icon {
+  display: none;
+  z-index: 7;
+  position: absolute;
+  right: 2.7%;
+  top: 5px;
+  transform: rotateZ(0deg);
+  transition: all 0.5s ease-in-out;
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+  span,
+  &::before,
+  &::after {
+    left: 0;
+    border-radius: 3px;
+    position: absolute;
+    height: 15%;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    background-color: #000;
+  }
+  &::before,
+  &::after {
+    content: "";
+    border-radius: 3px;
+  }
+  &::before {
+    left: 25%;
+    top: 0;
+    width: 50%;
+  }
+  &::after {
+    left: 25%;
+    bottom: 0;
+    width: 50%;
+  }
+  span {
+    top: 42%;
+    transform: rotateY(0);
+  }
+  &._active {
+    transform: rotateZ(-90deg);
+    span {
+      transform: rotateY(90deg);
+    }
+    &::before {
+      left: 0%;
+      width: 100%;
+      top: 50%;
+      transform: rotate(-45deg) translate(0, -50%);
+    }
+    &::after {
+      left: 0;
+      width: 100%;
+      bottom: 50%;
+      transform: rotate(45deg) translate(0, 50%);
+    }
+  }
+}
+
+.burger__menu {
+  padding: 0 0 30px;
+  display: none;
+  background: #fff;
+  //border: 1px solid #000;
+  position: absolute;
+  width: 97%;
+  top: 60px;
+  left: 1.5%;
+  z-index: 5;
+  opacity: 0;
+  transform: translateY(-60%) scaleY(0);
+  transition: all 0.5s ease-in-out;
+  ul {
+    padding: 0;
+    li {
+      margin: 0 0 10px;
+      font-size: 1.5em;
+      a {
+        transition: all 0.4s ease-in-out;
+        &:hover {
+          color: #e54a35;
+        }
+      }
+    }
+  }
+  form {
+    input[type="submit"] {
+      line-height: 20px;
+      height: 100%;
+    }
+    input {
+      &:first-child {
+        width: 15px;
+        height: 100%;
+        border: none;
+        cursor: pointer;
+        background: url("../img/search.svg") 0 0 / contain no-repeat;
+      }
+      &:last-child {
+        border: none;
+        width: 80%;
+      }
+    }
+  }
+  .burger__button {
+    border: 1px solid #000;
+    border-radius: 20px;
+    padding: 10px 20px;
+    transition: all 0.4s ease-in-out;
+    &:hover {
+      border-radius: 22px;
+      border: 1px solid #e54a35;
+      background: #e54a35;
+      color: #fff;
+    }
+  }
+  &._active {
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+  }
 }
 
 .container {
